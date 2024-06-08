@@ -291,9 +291,26 @@ footer {
 
 /* Media Queries */
 @media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .navbar .nav-links {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .navbar .nav-links li {
+        margin: 0;
+        width: 100%;
+    }
+
+    .navbar .nav-links a {
+        display: block;
+        padding: 0.5rem;
+        width: 100%;
     }
 
     .hero h1 {
@@ -324,3 +341,4 @@ footer {
         font-size: 1.2rem;
     }
 }
+
