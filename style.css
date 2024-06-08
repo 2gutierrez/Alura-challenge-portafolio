@@ -1,287 +1,114 @@
-/* General Styles */
 body {
-    font-family: 'Raleway', sans-serif;
+    background-image: linear-gradient(#eff5f5, #97ade8);
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-/* Navbar Styles */
-.navbar {
+header {
+    text-align: center;
+    padding: 30px 0;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.text-section, .result-section {
+    width: 100%;
+    max-width: 600px;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.campoTexto, .resultado {
+    width: 100%;
+    height: 150px;
+    margin-top: 10px;
+    border: 2px solid #97ade8;
+    border-radius: 5px;
+    text-align: center;
+    text-transform: lowercase;
+    font-size: 16px;
+    padding: 10px;
+    resize: none;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.botones {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    margin-top: 10px;
+    width: 100%;
 }
 
-.navbar .logo {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-}
-
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-}
-
-.navbar .nav-links li {
-    margin-left: 1rem;
-}
-
-.navbar .nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.navbar .nav-links a:hover {
-    color: #ddd;
-}
-
-/* Hero Section Styles */
-.hero {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
-}
-
-.hero img {
-    max-width: 150px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
-.title__network {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-}
-
-.title__network a {
-    color: #333;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-.title__network a:hover {
-    color: #555;
-}
-
-/* About Section Styles */
-.about {
-    padding: 2rem;
-    text-align: center;
-}
-
-.about h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.about p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* Skills Section Styles */
-.skills {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
-}
-
-.skills h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.skills__line {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.skills__box {
-    text-align: center;
-}
-
-.skills__box img {
-    max-width: 100px;
-}
-
-.skills__box p {
-    font-size: 1rem;
-}
-
-/* Hobbies Section Styles */
-.hobbies {
-    padding: 2rem;
-    text-align: center;
-}
-
-.hobbies h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.hobbies__line {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.hobbies__box {
-    text-align: center;
-}
-
-.hobbies__box img {
-    max-width: 100px;
-}
-
-.hobbies__box p {
-    font-size: 1rem;
-}
-
-/* Academic Section Styles */
-.academic {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
-}
-
-.academic h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.academic__courses {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.academic__courses__box {
-    text-align: center;
-}
-
-.academic__courses__box img {
-    max-width: 150px;
-    margin-bottom: 1rem;
-}
-
-.academic__courses__box h3 {
-    font-size: 1.2rem;
-}
-
-.academic__courses__box p {
-    font-size: 1rem;
-}
-
-/* Experience Section Styles */
-.experience {
-    padding: 2rem;
-    text-align: center;
-}
-
-.experience h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.experience__box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem;
-}
-
-.experience__box img {
-    max-width: 300px;
-    margin-bottom: 1rem;
-}
-
-.experience__info {
-    text-align: center;
-}
-
-.experience__info h3 {
-    font-size: 1.5rem;
-}
-
-.experience__info p {
-    font-size: 1rem;
-}
-
-.button {
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border-radius: 5px;
-}
-
-.button:hover {
-    background-color: #555;
-}
-
-/* Contact Section Styles */
-.contact {
-    background-color: #f4f4f4;
-    padding: 2rem;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.contact form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.contact form input, .contact form textarea {
-    width: 80%;
-    padding: 0.5rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact form button {
-    background-color: #333;
-    color: #fff;
-    padding: 0.5rem 1rem;
+.boton {
+    padding: 10px 20px;
+    cursor: pointer;
+    flex: 1;
+    margin: 0 5px;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    background-color: #97ade8;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
 }
 
-.contact form button:hover {
-    background-color: #555;
+.boton:hover {
+    background-color: #6f8ad9;
 }
 
-/* Footer Styles */
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: 10px;
+    display: none;
+}
+
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
+    text-align: right;
+    padding: 20px;
+    font-size: 12px;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .campoTexto, .resultado {
+        height: 120px;
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    .boton {
+        margin: 5px 0;
+    }
 }
