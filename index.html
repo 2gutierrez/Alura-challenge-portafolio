@@ -2,37 +2,144 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Encriptador de Texto</title>
-    <link rel="stylesheet" href="style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Portafolio de Jesús Gutiérrez, desarrollador web en formación.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    <title>Mi Portafolio - Jesús Gutiérrez</title>
 </head>
 <body>
     <header>
-        <img src="Logo.png" alt="Logo-Alura" title="Logo Alura" class="logo">
-        <h1>Encriptador secreto de texto</h1>
+        <nav class="navbar">
+            <a href="#home" class="logo">Jesús Gutiérrez</a>
+            <ul class="nav-links">
+                <li><a href="#sobre-mi">Sobre mi</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#formacion">Formación</a></li>
+                <li><a href="#xp">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
+
     <main>
-        <section class="text-section">
-            <label for="textoIntroducido"></label>
-            <textarea id="textoIntroducido" class="campoTexto" placeholder="Ingrese su texto aquí:" required maxlength="300"></textarea>
-            <div class="botones">
-                <button class="boton botonE" onclick="botonE()">Encriptar</button>
-                <button class="boton botonD" onclick="botonD()">Desencriptar</button>
+        <section id="home" class="hero">
+            <img class="title__profile" src="assets/selfie.jpg" alt="Jesús Gutiérrez">
+            <div class="title__container">
+                <h1>Soy Jesús Gutiérrez y quiero ser desarrollador Web</h1>
+                <p>Autodidacta. Formación en AluraLatam y Freecodecamp. Actualmente participo en el proyecto Oracle ONE en Alura Latam.</p>
+                <ul class="title__network">
+                    <li><a href="https://github.com/2gutierrez">Github</a></li>
+                    <li><a href="https://linkedin.com/in/yourprofile">LinkedIn</a></li>
+                    <li><a href="https://instagram.com/yourprofile">Instagram</a></li>
+                </ul>
             </div>
-            <p id="error-message" class="error-message"></p>
         </section>
-        <section class="result-section">
-            <label for="resultado"></label>
-            <textarea id="resultado" class="resultado" placeholder="Resultado:" readonly></textarea>
-            <div class="botones">
-                <button class="boton botonC" onclick="botonC()">Copiar</button>
+
+        <section id="sobre-mi" class="about">
+            <h2>Sobre mi</h2>
+            <p>Soy licenciado en Psicología por la Universidad Nacional Autónoma de México. Diplomado en Economía por el Instituto Matías Romero de Estudios Diplomáticos.</p>
+            <p>Me apasiona aprender cosas nuevas y enfrentar retos. Internacionalista por necesidad. Desarrollador WEB por afición.</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>Skills</h2>
+            <div class="skills__line">
+                <div class="skills__box">
+                    <img src="assets/htlm.png" alt="HTML">
+                    <p>HTML 5</p>
+                </div>
+                <div class="skills__box">
+                    <img src="assets/js_icon.png" alt="Javascript">
+                    <p>Javascript</p>
+                </div>
+                <div class="skills__box">
+                    <img src="assets/css_icon.png" alt="CSS">
+                    <p>CSS</p>
+                </div>
             </div>
+        </section>
+
+        <section id="hobbies" class="hobbies">
+            <h2>Hobbies</h2>
+            <div class="hobbies__line">
+                <div class="hobbies__box">
+                    <img src="assets/guitar_icon.png" alt="Tocar bajo">
+                    <p>Tocar bajo</p>
+                </div>
+                <div class="hobbies__box">
+                    <img src="assets/headphones_icon.png" alt="Oir música">
+                    <p>Oir música</p>
+                </div>
+                <div class="hobbies__box">
+                    <img src="assets/tv_icon.png" alt="Ver séries">
+                    <p>Ver séries</p>
+                </div>
+                <div class="hobbies__box">
+                    <img src="assets/camera_icon.png" alt="Tomar fotos">
+                    <p>Tomar fotos</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="formacion" class="academic">
+            <h2>Formación académica</h2>
+            <div class="academic__courses">
+                <div class="academic__courses__box">
+                    <img src="assets/alura_logo.png" alt="Alura">
+                    <h3>Formación en Front-end</h3>
+                    <p>2024 - Alura</p>
+                </div>
+                <div class="academic__courses__box">
+                    <img src="https://cdn.freecodecamp.org/platform/universal/fcc_meta_1920X1080-indigo.png" alt="Freecodecamp">
+                    <h3>Formación en Front-end</h3>
+                    <p>2024 - Freecodecamp</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="xp" class="experience">
+            <h2>Experiencia Profesional</h2>
+            <div class="experience__box">
+                <img src="assets/imagen_encriptador.png" alt="Encriptador de texto">
+                <div class="experience__info">
+                    <h3>Encriptador de texto</h3>
+                    <p>Challenge Alura Codificador</p>
+                    <a href="https://github.com/2gutierrez/challenge-oracle-decoder.git" class="button">Repositório</a>
+                    <a href="https://2gutierrez.github.io/challenge-oracle-decoder/" class="button">Ver demo</a>
+                </div>
+            </div>
+            <div class="experience__box">
+                <img src="assets/U2_tribute.png" alt="Tribute Page">
+                <div class="experience__info">
+                    <h3>Tribute Page</h3>
+                    <p>Freecodecamp Challenge</p>
+                    <a href="https://github.com/2gutierrez/U2-Tribute-page.git" class="button">Repositório</a>
+                    <a href="https://2gutierrez.github.io/U2-Tribute-page/" class="button">Ver demo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <h2>Contacto</h2>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Nombre" required>
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="text" id="asunto" name="asunto" placeholder="Asunto" required>
+                <textarea id="mensaje" name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar mensaje</button>
+            </form>
         </section>
     </main>
+
     <footer>
-        <p>Developed by: Jesús A. Gutiérrez M. &copy; 2024</p>
+        <p>&copy; 2024 Jesús Gutiérrez. Developed by Jesús Gutiérrez.</p>
     </footer>
-    <script src="app.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
