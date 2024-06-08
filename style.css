@@ -1,669 +1,287 @@
-/*CSS Reset / Normalize*/
-/* Hemos disponibilizado el básico de reset de estilos. Si quieren, añadan más informaciones 
-en las secciones señaladas */
-
-*, *:before, *:after {
-    box-sizing: inherit;
-}
-
-html {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    
-}
-
-
-
-
-:root{
-    /* Inserta la variable de los otros colores inspeccionando el exemplo de figma */
-    /*Se esforce para trabalhar com variáveis, é uma dica profissional valiosa*/
-   --cor-de-fundo: #f5f5f5;
-   --cor-de-link: #000;
-   --color-alterno: hsla(195, 53%, 79%, 0.262);
-}
-
+/* General Styles */
 body {
-    
-    /* background: linear-gradient (var(--cor-de-fundo) top),  */
-                    /* linear-gradient (var(--color-alterno) bottom); */
-    background: linear-gradient(#f5f5f5 9%, #E3F2F5 9% 16%, #f5f5f5 16% 27%, 
-                                 #E3F2F5 27% 45%, #f5f5f5 45% 90%, #E3F2F5 90% 98.3%, #f5f5f5 98.3% 100%);
-
-    font-family: 'Raleway';
-    color: #464646;
- 
-    margin: 0 10px 0 10px;
-    /* padding: 0 100px 0 25px; */
-    line-height: 1;
-    display: block;
-    position: relative;
-    justify-content: center;
-    
-    flex-direction: column;
-    flex-wrap: wrap;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    
 }
 
-main {
-display: flex;
-flex-direction: column;
-align-items: center;
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-ol, ul,li {
-    list-style: none;
-}
-a{
+.navbar .logo {
+    color: #fff;
     text-decoration: none;
-    color: var(--cor-de-link);
+    font-size: 1.5rem;
 }
 
-/*En este desafío nosostros gustaríamos que ustedes intentaran utilizar la metodología BEM. 
-
-Lo que es el BEM?
-
-BEM (Bloque, Elemento, Modificador) es un enfoque basado en componentes para el 
-desarrollo web. La idea detrás de esto es dividir la interfaz de usuario en bloques
-independientes. Esto hace que el desarrollo de la interfaz sea fácil y rápido, incluso
-con una interfaz de usuario compleja, y permite la reutilización del código existente sin copiar y pegar.
-
-Enlace de la documentación oficial!
-https://en.bem.info/methodology/quick-start/*/
-
-/*Sección Menu*/
-
-.menu{
-    display:inline-flex;
-    position: relative;
-    justify-content: space-between;
-    top: 1;
-    height: 10%;
-    width: fit-content;
-    margin-top: 5px;
-    
-}
-
-.img{
-    
-    
-}
-
-.menu__title{
-    font-weight: 800;
-    margin-right: auto;
+.navbar .nav-links {
+    list-style: none;
     display: flex;
-    padding-left: 10px;
-}
-.menu__header{
-    height: 60px;
-    padding: 0 30px;
-    display:contents;
-    gap: 10px;
-    align-content: center;
-    justify-content: space-between;
-     margin-right: 80%;
-     
 }
 
-nav{
-    display: flex;
-    
+.navbar .nav-links li {
+    margin-left: 1rem;
 }
 
-.menu__list{
-    display: none;
-    flex-direction: row;
-    justify-content: space-between;
-
-  
-}
-.menu__list__item{
-display: flex;
-margin: 10px;
-font-size: medium;
-box-sizing: content-box;
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
 }
 
-.menu__list__item__contato{
-    display:flex;
-    justify-content: flex-end;
-    font-weight:bold;
-    margin-left: 90%;
-   
-}
- 
-
-
-/*Sección Title*/
-
-section.title{
-    display: inline-flex;
-    position: relative;
-    justify-content: space-around;
-    width: fit-content;
-    flex-direction: row;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    
-    }
-
-    .title__container{
-        display: flex;
-        position: relative;
-        justify-content: center;
-        width: fit-content;
-        flex-direction: column;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-       
-    }
-
-    .title__div{
-        display: contents;
-        position: relative;
-        /* justify-content: center; */
-        width: -webkit-fill-available;
-        /* flex-direction: column; */
-        /* flex-wrap: wrap; */
-        box-sizing: border-box;
-       
-    }
-    .title__profile{
-        display: flex;
-        width: 13%;
-        border-radius: 15px;
-        position: relative;
-        margin: 15px;
-        
+.navbar .nav-links a:hover {
+    color: #ddd;
 }
 
-
-.title__bio{
-    font-size: medium;
-    margin: 20px 0 20px 0;
-}
-
-.title__subsection{
-    font-size: small;
-    font-weight: 300;
-    margin: 20px 0 20px 0;
-}
-.title__network{
-    display: flex;
-    justify-content: left;
-    margin: 10px 0 0 0;
-    gap: 35px;
-    font-size: small;
-   
-}
-
-/*Sección About*/
-
-section.about{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    width: fit-content;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    margin-top: 10px;
-   margin-bottom: 20px;
-}
-
-.about{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    width: fit-content;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-    margin: 30px 10px 10px 0;
-   
-}
-
-.about__container{
-    display: flex;
-    position: relative;
-    justify-content: center;
-    width: fit-content;
-    flex-direction: column;
-    flex-wrap: wrap;
-    box-sizing: border-box;
-}
-
-/* Seccion skills */
-
-section.skills{
-    position: relative;
-    flex-direction: column;
-    justify-content:center;
+/* Hero Section Styles */
+.hero {
+    background-color: #f4f4f4;
+    padding: 2rem;
     text-align: center;
-    margin-top: 40px;
-    margin-bottom:20px;
-    
 }
 
-.skills__box{
-    box-sizing: border-box;
-    width:fit-content;
-    background-color:white;
-    padding: 5px;
-    justify-content: space-between;
-    margin: 10px;
-    
-
+.hero img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
-.skills__line{
-    display: ruby;
-    flex-direction:row ;
-    text-align: center;
-    margin-bottom: 10px;
-    
+.hero h1 {
+    font-size: 2.5rem;
 }
 
-
-
-/*Sección Hobbies*/
-
-section.hobbies{
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.hero p {
+    font-size: 1.2rem;
 }
 
-.hobbies__line{
-    display: ruby;
-    flex-direction:row ;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.hobbies__box{
-box-sizing: border-box;
-width: 20%;
-background-color:white;
-padding: 10px;
-margin-top: 20px;
-}
-
-/* Experiencia Académica*/
-
-section.academic{
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-
-}
-
-.academic__courses{
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-/* experiencia*/
-
-section.experience{
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
-
-/*Contacto*/
-
-section.formcontato{
+.title__network {
+    list-style: none;
     display: flex;
-    position: relative;
-    flex-direction: column;
     justify-content: center;
+    gap: 1rem;
+}
+
+.title__network a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.title__network a:hover {
+    color: #555;
+}
+
+/* About Section Styles */
+.about {
+    padding: 2rem;
     text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
 }
 
-.formcontato__img{
-    display: none;
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
-.formcontato__form{
+
+.about p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Skills Section Styles */
+.skills {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.skills__line {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-
-}
-
-/*footeer*/
-
-section.footer{
-    position: relative;
-    flex-direction: column;
     justify-content: center;
+    gap: 2rem;
+}
+
+.skills__box {
     text-align: center;
-    margin-top: 2%;
-    margin-bottom: 2%;
 }
 
-/* Vamos a desafiarnos trabajando con responsividad?
-Utiliza las referencias de los breakpoints @media abajo */
-
-
-/*PC*/
-
-@media (max-width: 480px) {
-body{
-    background: linear-gradient(#f5f5f5 14.5%, #E3F2F5 14.5% 24%, #f5f5f5 24% 36.25%, 
-    #E3F2F5 36.25% 55.5%, #f5f5f5 55.5% 88.8%, #E3F2F5 88.8% 98.4%, #f5f5f5 98.4% 100%);
-     display: block;
-    unicode-bidi: isolate;
+.skills__box img {
+    max-width: 100px;
 }
 
-
-section.title {
-    width: min-content;
-    display: contents;
+.skills__box p {
+    font-size: 1rem;
 }
 
-.title__profile{
+/* Hobbies Section Styles */
+.hobbies {
+    padding: 2rem;
+    text-align: center;
+}
+
+.hobbies h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hobbies__line {
     display: flex;
-    width: 20%;
-    border-radius: 15px;
-    position: relative;
-    margin: 5px;
-    
+    justify-content: center;
+    gap: 2rem;
 }
 
-.experience{
+.hobbies__box {
+    text-align: center;
+}
+
+.hobbies__box img {
+    max-width: 100px;
+}
+
+.hobbies__box p {
+    font-size: 1rem;
+}
+
+/* Academic Section Styles */
+.academic {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.academic h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.academic__courses {
     display: flex;
-    position: relative;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.academic__courses__box {
+    text-align: center;
+}
+
+.academic__courses__box img {
+    max-width: 150px;
+    margin-bottom: 1rem;
+}
+
+.academic__courses__box h3 {
+    font-size: 1.2rem;
+}
+
+.academic__courses__box p {
+    font-size: 1rem;
+}
+
+/* Experience Section Styles */
+.experience {
+    padding: 2rem;
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.experience__box {
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    margin-bottom: 2rem;
 }
-.experience__img{
+
+.experience__box img {
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+.experience__info {
+    text-align: center;
+}
+
+.experience__info h3 {
+    font-size: 1.5rem;
+}
+
+.experience__info p {
+    font-size: 1rem;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Contact Section Styles */
+.contact {
+    background-color: #f4f4f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact form {
     display: flex;
-    position: relative;
+    flex-direction: column;
     align-items: center;
-    width: 100%;
+    gap: 1rem;
 }
 
+.contact form input, .contact form textarea {
+    width: 80%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-
-
-@media (min-width: 1024px) {
-
-body{
-    background: linear-gradient(#f5f5f5 0 10.5%, #E3F2F5 10.5% 14%, #f5f5f5 14% 24.5%, 
-    #E3F2F5 24.5% 40.5%, #f5f5f5 40.5% 78.6%, #E3F2F5 78.6% 98%, #f5f5f5 98% 100%);
+.contact form button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.body{
-    display: flex;
-    overflow: scroll;
-    justify-content:baseline;
-    position: fixed;
-    width: auto;
-    flex-direction: row-reverse;
-    
+.contact form button:hover {
+    background-color: #555;
 }
 
-/* Menú */
-
-.menu{
-    display:inline-flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 1;
-    height: 10%;
-    width: 98%;
-    vertical-align: baseline;
-    margin-top: 5px;
-    font-size: large;
-    
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
 }
-.menu__list{
-    display: flex;
-    flex-direction: row;
-    font-size: 16px;
-    gap: 10px;
-    justify-content: flex-end;
-   margin-right: 25px;
-  
-}
-
-.menu__list__item{
-    display: inline-flex;
-    justify-content: space-around;
-
-}
-.menu__list__item__contato{
-    display: flex;
-    justify-content: end;
-    margin: auto;
-}
-
-
-    
-/*title*/
-
-.title__div {
-    display: flex;
-    flex-direction: row-reverse;
-    width: 100%;
-    position: relative;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-content: flex-start;
-}
-
-.title__bio{
-    font-size:x-large;
-    margin: 40px 0 10px 0;
-}
-
-.title__subsection{
-    font-size: large;
-    margin: 20px 20px 10px 0px;
-}
-
-.title__network{
-    font-size: medium;
-    margin: 40px 20px 0px 0px;
-}
-.title__profile{
-    width: 11%;
-}
-/*Sección About*/
-
-section.about{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    
- }
- 
- .about{
- 
-    
- }
- 
- .about__container{
-     display: -webkit-box;
-     position: relative;
-     flex-direction: column;
-     justify-content: left;
-     width:auto;
-     text-align: left;
-     margin-bottom: 20px;
- }
- 
- /* Seccion skills */
- 
- section.skills{
-     display: flex;
-     position: relative;
-     flex-direction: column;
-     justify-content: center;
-     text-align: center;
-     margin-top:40px;
-     margin-bottom: 10px;
- }
- 
- .skills__box{
-     box-sizing: border-box;
- width: 35%;
- background-color:white;
- 
- }
- 
- .skills__line{
-     display: flex;
-     flex-direction:row ;
-     text-align: center;
-     
- }
- 
- 
- 
- /*Sección Hobbies*/
- 
- section.hobbies{
-     position: relative;
-     flex-direction: column;
-     justify-content: center;
-     text-align: center;
-     margin-top: 2%;
-     margin-bottom: 2%;
- }
- 
- .hobbies__line{
-     display: ruby;
-     flex-direction:row ;
-     text-align: center;
- }
- 
- .hobbies__box{
- box-sizing: border-box;
- width: 20%;
- background-color:white;
- padding: 10px;
- }
- 
- /* Experiencia Académica*/
- 
- section.academic{
-     position: relative;
-     flex-direction: column;
-     justify-content: center;
-     text-align: center;
-     margin-top: 2%;
-     margin-bottom: 2%;
- 
- }
- 
- .academic__courses{
-     position: relative;
-     flex-direction: column;
-     justify-content: center;
-     text-align: center;
-     margin-top: 2%;
-     margin-bottom: 2%;
- }
- 
- /* experiencia*/
- 
- section.experience{
-     position: relative;
-     flex-direction: column;
-     justify-content: center;
-     text-align: center;
-     margin-top: 2%;
-     margin-bottom: 2%;
- }
- 
- /*Contacto*/
- 
- section.formcontato{
-    display: flex;
-     position:relative;
-     flex-direction: row;
-     justify-content: center;
-     text-align: center;
-     margin-top: 2%;
-     margin-bottom: 2%;
-     width: auto;
-    box-sizing: border-box;
- }
-
- formcontato-esquerda{
-    display: inline-flex;
-    flex-direction: row;
-    width: 25%;
-    text-align: left;
- }
-
- .formcontato__img{
-    display: inline-flex;
-    width: 45%;
-    text-align: left;
-
-.formcontato__text{
-    display: flex;
-
-}
-}
- 
- /*footeer*/
- 
- section.footer{
-
-     position:relative;
-     flex-direction: row;
-     justify-content: center;
-     text-align: center;
-     margin-top: 2%;
-     margin-bottom: 2%;
- }
- 
-
-}
-
-
