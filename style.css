@@ -113,6 +113,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap; /* Allow skills to wrap on smaller screens */
 }
 
 .skills__box {
@@ -142,6 +143,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap; /* Allow hobbies to wrap on smaller screens */
 }
 
 .hobbies__box {
@@ -172,6 +174,7 @@ body {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap; /* Allow courses to wrap on smaller screens */
 }
 
 .academic__courses__box {
@@ -286,3 +289,38 @@ footer {
     padding: 1rem;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .about h2 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 0.9rem;
+    }
+
+    .skills h2, .hobbies h2, .academic h2, .experience h2, .contact h2 {
+        font-size: 1.5rem;
+    }
+
+    .skills__box p, .hobbies__box p, .academic__courses__box p, .experience__info p {
+        font-size: 0.9rem;
+    }
+
+    .experience__info h3 {
+        font-size: 1.2rem;
+    }
+}
